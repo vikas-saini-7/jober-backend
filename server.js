@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
   console.log('Connection successful');
 });
 
-//get jobs 
+//get jobs
 // app.get('/api/jobs', async (req, res) => {
 //   try {
 //     const job = await Job.find();
