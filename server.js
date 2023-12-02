@@ -133,4 +133,4 @@ app.listen(PORT, () => {
 
 
 // This is required for Vercel to recognize your app as a serverless function
-// module.exports = app;
+module.exports = app;
