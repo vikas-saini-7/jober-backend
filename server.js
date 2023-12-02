@@ -1,7 +1,7 @@
 // Load environment variables from .env file
 // require('dotenv').config();
 const express = require('express');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 // const Job = require('./models/job');
 const cors =require('cors');
 // const Employer  = require('./models/employer');
