@@ -1,8 +1,8 @@
 // Load environment variables from .env file
-require('dotenv').config();
+// require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
-const Job = require('./models/job');
+// const mongoose = require('mongoose');
+// const Job = require('./models/job');
 const cors =require('cors');
 // const Employer  = require('./models/employer');
 
@@ -26,17 +26,17 @@ app.use((req, res, next) => {
 });
 
 // Connecting with Mongo DB Atlas 
-const url = process.env.MONGO_URI;
-mongoose.connect(url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => {
-  console.log('Connected to MongoDB Atlas');
-})
-.catch((error) => {
-  console.error('Error connecting to MongoDB Atlas:', error);
-});
+// const url = process.env.MONGO_URI;
+// mongoose.connect(url, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+// .then(() => {
+//   console.log('Connected to MongoDB Atlas');
+// })
+// .catch((error) => {
+//   console.error('Error connecting to MongoDB Atlas:', error);
+// });
 
 // Middeleware 
 app.use(express.json());
@@ -51,18 +51,18 @@ app.get('/', (req, res) => {
 });
 
 //get jobs 
-app.get('/api/jobs', async (req, res) => {
-  try {
-    const job = await Job.find();
-    if (!job) {
-      return res.status(404).json({ message: 'Note not found' });
-    }
-    res.json(job);
-  } catch (error) {
-    console.error('Error getting job:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
+// app.get('/api/jobs', async (req, res) => {
+//   try {
+//     const job = await Job.find();
+//     if (!job) {
+//       return res.status(404).json({ message: 'Note not found' });
+//     }
+//     res.json(job);
+//   } catch (error) {
+//     console.error('Error getting job:', error);
+//     res.status(500).send('Internal Server Error');
+//   }
+// });
 
 // //get random jobs 
 // // app.get('/api/jobs', async (req, res) => {
